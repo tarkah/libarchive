@@ -69,6 +69,8 @@ archive_read_support_format_by_code(struct archive *a, int format_code)
 		return archive_read_support_format_xar(a);
 	case ARCHIVE_FORMAT_ZIP:
 		return archive_read_support_format_zip(a);
+	case ARCHIVE_FORMAT_STONE:
+		return archive_read_support_format_stone(a);
 	}
 	archive_set_error(a, ARCHIVE_ERRNO_PROGRAMMER,
 	    "Invalid format code specified");

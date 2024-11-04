@@ -112,6 +112,7 @@ SET(libarchive_SOURCES
   archive_read_support_format_warc.c
   archive_read_support_format_xar.c
   archive_read_support_format_zip.c
+  archive_read_support_format_stone.c
   archive_string.c
   archive_string.h
   archive_string_composition.h

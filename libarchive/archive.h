@@ -383,6 +383,7 @@ typedef const char *archive_passphrase_callback(struct archive *,
 #define	ARCHIVE_FORMAT_7ZIP			0xE0000
 #define	ARCHIVE_FORMAT_WARC			0xF0000
 #define	ARCHIVE_FORMAT_RAR_V5			0x100000
+#define	ARCHIVE_FORMAT_STONE			0x200000
 
 /*
  * Codes returned by archive_read_format_capabilities().
@@ -509,6 +510,8 @@ __LA_DECL int archive_read_support_format_zip(struct archive *);
 __LA_DECL int archive_read_support_format_zip_streamable(struct archive *);
 /* Reads starting from central directory; requires seekable input. */
 __LA_DECL int archive_read_support_format_zip_seekable(struct archive *);
+
+__LA_DECL int archive_read_support_format_stone(struct archive *);
 
 /* Functions to manually set the format and filters to be used. This is
  * useful to bypass the bidding process when the format and filters to use

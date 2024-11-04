@@ -93,6 +93,9 @@ archive_read_set_format(struct archive *_a, int code)
     case ARCHIVE_FORMAT_ZIP:
       strcpy(str, "zip");
       break;
+    case ARCHIVE_FORMAT_STONE:
+      strcpy(str, "stone");
+      break;
     default:
       archive_set_error(&a->archive, ARCHIVE_ERRNO_PROGRAMMER,
           "Invalid format code specified");
