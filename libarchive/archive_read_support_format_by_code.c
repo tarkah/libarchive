@@ -72,6 +72,9 @@ archive_read_support_format_by_code(struct archive *a, int format_code)
 	case ARCHIVE_FORMAT_RAW:
 		return archive_read_support_format_raw(a);
 		break;
+	case ARCHIVE_FORMAT_STONE:
+		return archive_read_support_format_stone(a);
+		break;
 	case ARCHIVE_FORMAT_TAR:
 		return archive_read_support_format_tar(a);
 		break;

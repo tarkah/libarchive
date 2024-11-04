@@ -81,6 +81,9 @@ archive_read_set_format(struct archive *_a, int code)
     case ARCHIVE_FORMAT_RAW:
       strcpy(str, "raw");
       break;
+    case ARCHIVE_FORMAT_STONE:
+      strcpy(str, "stone");
+      break;
     case ARCHIVE_FORMAT_TAR:
       strcpy(str, "tar");
       break;

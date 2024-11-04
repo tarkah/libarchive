@@ -485,6 +485,14 @@ if test "x$with_zstd" != "xno"; then
     AC_DEFINE([HAVE_ZSTD_compressStream], [1], [Define to 1 if you have the `zstd' library (-lzstd) with compression support.]))
 fi
 
+AC_ARG_WITH([libstone],
+  AS_HELP_STRING([--with-libstone], [Build with stone support from libstone]))
+
+if test "x$with_libstone" = "xyes"; then
+  AC_CHECK_HEADERS([stone.h])
+  AC_CHECK_LIB(stone,stone_read)
+fi
+
 AC_ARG_WITH([lzma],
   AS_HELP_STRING([--without-lzma], [Don't build support for xz through lzma]))
 
